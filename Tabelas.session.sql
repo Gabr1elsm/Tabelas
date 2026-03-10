@@ -3,11 +3,11 @@ CREATE TABLE tabelas;
 USE tabelas;
 
 CREATE TABLE  IF NOT EXISTS Livros(
-    id INT,
-    titulo var char(100)
-    autor var char(100)
-    ano_publicacao date
-    categoria var char(100)
+    id SMALLINT AUTO_INCREMENT PRIMARY KEY,
+    titulo var char(100) NOT NULL,
+    autor var char(100) NOT NULL,
+    ano_publicacao date,
+    categoria var char(100) NOT NULL
 );
 
 CREATE TABLE  Categorias(
