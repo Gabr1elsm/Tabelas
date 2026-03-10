@@ -2,9 +2,12 @@ CREATE DATABASE IF NOT EXISTS tabelas;
 
 USE tabelas;
 
+DROP TABLE IF EXISTS Livros;
+DROP TABLE IF EXISTS Categorias;
 
-CREATE TABLE  IF NOT EXISTS Livros(
-    id SMALLINT AUTO_INCREMENT PRIMARY KEY,
+
+CREATE TABLE Livros(
+    id INT AUTO_INCREMENT PRIMARY KEY,
     titulo VARCHAR(100) NOT NULL,
     autor VARCHAR(100) NOT NULL,
     ano_publicacao date,
@@ -21,6 +24,9 @@ CREATE TABLE  Categorias(
  
 
  values
- (1, 'Clean code', 'Robert C Martin', '2008-08-01', 'Técnologia');
+ (1, 'Clean code', 'Robert C Martin', '2008-08-01', 'Técnologia'),
+ (2, 'Chapeuzinho vermelho', 'Charles Perrault', '1697-01-01', 'Infatil'),
+ (3, 'É assim que acaba', 'Collen Hoover', '2016-08-02', 'Romance'),
+ (4, 'A paciente silenciosa', 'Alex Michaelides', '2019-01-01', 'Suspense');
 
  SELECT * FROM Livros;
